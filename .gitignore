@@ -1,0 +1,10 @@
+/target/
+/target/debug/**
+**/*.o
+**/*.obj
+**/*.exe
+**/*.dll
+**/*.log
+/build/
+*.iso
+*.dat
