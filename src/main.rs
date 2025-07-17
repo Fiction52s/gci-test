@@ -1,6 +1,8 @@
 use tm_replay::*;
 mod compress;
 mod char_data;
+use std::env;
+use std::fs;
 
 
 pub fn funstruct_tm_replay(
@@ -42,7 +44,9 @@ pub fn funstruct_tm_replay(
 
     //let message = b"HELLO FROM SCREENSHOT!";
     let msg_len = json_bytes.len().min(screenshot_size);
-    bytes[screenshot_offset + 1..screenshot_offset + msg_len + 1].copy_from_slice(&json_bytes[..msg_len]);
+    println!( "json bytes: {}", msg_len);
+    //bytes[screenshot_offset + 1] = msg_len;
+    bytes[screenshot_offset + 2..screenshot_offset + msg_len + 2].copy_from_slice(&json_bytes[..msg_len]);
 
     let recording_offset = bytes.len();
 
@@ -489,9 +493,47 @@ pub fn funstruct_tm_replay(
 
 
 
+use serde::Deserialize;
 
+#[derive(Debug, Deserialize)]
+struct Workout {
+    name: String,
+    workout_type: u8,
+    exercises: Vec<String>,
+}
 
+use std::path::Path;
 
+fn encode_workouts_to_bytes<P: AsRef<Path>>(json_path: P) -> anyhow::Result<Vec<u8>> {
+    let json_content = fs::read_to_string(json_path)?;
+    let workouts: Vec<Workout> = serde_json::from_str(&json_content)?;
+
+    let mut buf = Vec::new();
+    buf.push(workouts.len() as u8); // Number of workouts
+
+    for workout in workouts {
+        let name_bytes = workout.name.as_bytes();
+        if name_bytes.len() > 255 {
+            anyhow::bail!("Workout name too long: {}", workout.name);
+        }
+
+        buf.push(name_bytes.len() as u8);
+        buf.extend_from_slice(name_bytes);
+        buf.push(workout.workout_type);
+
+        buf.push(workout.exercises.len() as u8);
+        for ex in workout.exercises {
+            let ex_bytes = ex.as_bytes();
+            if ex_bytes.len() > 255 {
+                anyhow::bail!("Exercise name too long: {}", ex);
+            }
+            buf.push(ex_bytes.len() as u8);
+            buf.extend_from_slice(ex_bytes);
+        }
+    }
+
+    Ok(buf)
+}
 
 pub fn small_create_blank_replay(json_bytes: &[u8]) -> Result<(), ReplayCreationError> {
     use std::fs::write;
@@ -548,8 +590,6 @@ pub fn small_create_blank_replay(json_bytes: &[u8]) -> Result<(), ReplayCreation
 }
 
 
-use std::env;
-use std::fs;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = env::args().collect();
@@ -559,9 +599,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     let json_path = &args[1];
-    let json_data = fs::read(json_path)?;
+    //let json_data = fs::read(json_path)?;
 
-    small_create_blank_replay(&json_data)
+    let encoded_data = encode_workouts_to_bytes(json_path)?;
+
+    small_create_blank_replay(&encoded_data)
         .expect("Failed to create minimal GCI replay");
     
       Ok(())

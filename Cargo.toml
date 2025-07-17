@@ -9,3 +9,7 @@ tm_replay = {path = "../tm_replay-main/tm_replay-main"}
 
 #tm_replay = { git = "https://github.com/AlexanderHarrison/tm_replay" }
 slp_parser = { git = "https://github.com/AlexanderHarrison/slp_parser" }
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"

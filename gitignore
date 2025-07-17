@@ -1,0 +1,51 @@
+# === Rust ===
+/target/
+/Cargo.lock
+**/*.rs.bk
+**/*.swp
+
+# === C build output ===
+/build/
+/*.iso
+/*.zip
+*.o
+*.elf
+*.dol
+*.dat
+*.gct
+*.map
+
+# === Windows/Mac/Linux clutter ===
+*.exe
+*.dll
+*.so
+*.dylib
+*.DS_Store
+Thumbs.db
+
+# === Backup & temporary files ===
+*.bak
+*.tmp
+*~
+.#*
+*.swo
+*.swp
+
+# === Dolphin ===
+/User/
+/Sys/GameSettings/
+*.gci
+
+# === IDEs & editors ===
+.vscode/
+.idea/
+*.code-workspace
+.clangd/
+compile_commands.json
+
+# === Logs ===
+*.log
+
+# === MexTK ===
+MexTK/*.exe
+*.xdelta
