@@ -1,0 +1,13 @@
+F:\TrainingModeMod\gci-stuff\gci-test\target\debug\deps\libtm_replay-622aa8156f514cea.rmeta: C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\lib.rs C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\compress.rs C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\autocancel.rs C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\hitboxes.rs C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\char_data.rs C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\savestate_matchinit.raw C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\gci_header.raw C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\fn_table.raw C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\special_fn_table.raw
+
+F:\TrainingModeMod\gci-stuff\gci-test\target\debug\deps\tm_replay-622aa8156f514cea.d: C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\lib.rs C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\compress.rs C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\autocancel.rs C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\hitboxes.rs C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\char_data.rs C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\savestate_matchinit.raw C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\gci_header.raw C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\fn_table.raw C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\special_fn_table.raw
+
+C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\lib.rs:
+C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\compress.rs:
+C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\autocancel.rs:
+C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\hitboxes.rs:
+C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\char_data.rs:
+C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\savestate_matchinit.raw:
+C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\gci_header.raw:
+C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\fn_table.raw:
+C:\Users\ficti\.cargo\git\checkouts\tm_replay-4cf0b27da4524571\14f68fa\src\special_fn_table.raw:

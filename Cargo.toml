@@ -1,0 +1,11 @@
+[package]
+name = "gci-test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+tm_replay = {path = "../tm_replay-main/tm_replay-main"}
+
+#tm_replay = { git = "https://github.com/AlexanderHarrison/tm_replay" }
+slp_parser = { git = "https://github.com/AlexanderHarrison/slp_parser" }
