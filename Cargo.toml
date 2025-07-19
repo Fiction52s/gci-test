@@ -1,7 +1,11 @@
 [package]
-name = "gci-test"
+name = "workout_gci_exporter"
 version = "0.1.0"
 edition = "2024"
+
+[lib]
+name="workout_gci_exporter"
+crate-type = ["cdylib"]
 
 [dependencies]
 
@@ -13,3 +17,5 @@ slp_parser = { git = "https://github.com/AlexanderHarrison/slp_parser" }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 anyhow = "1.0"
+
+
